@@ -75,7 +75,7 @@ if ($uploadOk == 0) {
 	}
 	else
 	{
-		$csv = array_map('str_getcsv', file("uploads/csv.csv"));
+		$csv = array_map('str_getcsv', file("uploads/100.csv"));
 		$actualfile="uploads/csv.csv";
 		$a=0;
 		
@@ -289,7 +289,7 @@ $inssql="Create table ".$target_file." (";
 		//print_r($ansdata);
 		//print_r($_POST);
 		?>
-		<script src="table.min.js"></script>
+		<script src="table.js"></script>
 		
 		
 		<script>paginate(10,document.getElementById("table2"))</script>
