@@ -22,7 +22,7 @@ function paginate(no,d,pno)
 	if(pno===undefined)
 		pno=1;
 
-	var res=2;
+	let res=2;
 	if(d===undefined)
 	{
 		
@@ -31,11 +31,11 @@ function paginate(no,d,pno)
 
 	if(bflag==0)
 		{
-		var hea=[];
+		let hea=[];
 
 		for(var i=0,row;row=d.rows[i];i++)
 			{
-			 var v2={};
+			 let v2={};
 	 		  for (var j = 0, col; col = row.cells[j]; j++)
 			  {
 	
@@ -58,16 +58,16 @@ function paginate(no,d,pno)
  
 		}
   
-	var f=0;
+	let f=0;
 
 	thtml="<table>";
 
-    	var val = arr[0];
+    	let val = arr[0];
 	thtml+="<tr>";
    	for(var j in val)
 		{
-        	var sub_key = j;
-        	var sub_val = val[j];
+        	let sub_key = j;
+        	let sub_val = val[j];
 		
 		if(f==0)
 		{
@@ -90,12 +90,12 @@ function paginate(no,d,pno)
 		if(i<arr.length)
 		{
 			
-   			 var key = i;thtml+="<tr>";
-    			 var val = arr[i];
+   			 let key = i;thtml+="<tr>";
+    			 let val = arr[i];
     			 for(var j in val)
 			 {
-        			var sub_key = j;
-        			var sub_val = val[j];
+        			let sub_key = j;
+        			let sub_val = val[j];
        				thtml+="<td >"+sub_val+"</td>";
    			 }
 			 thtml+="</tr>";
@@ -108,10 +108,10 @@ function paginate(no,d,pno)
 
 
 	if(arr.length%no==0)
-		var nobtn=arr.length/no;
+		let nobtn=arr.length/no;
 
 	else
-		var nobtn=parseInt(arr.length/no) +1;
+		let nobtn=parseInt(arr.length/no) +1;
 
 
 	thtml+="</table>";
@@ -124,8 +124,8 @@ function paginate(no,d,pno)
 			document.getElementsByClassName("tblebtngroup").remove();
 		}
 		
-		var tbhtml="";
-		var el=document.createElement("div");
+		let tbhtml="";
+		let el=document.createElement("div");
 		el.className="tblebtngroup";
 		tbhtml+="<br/>";
 		for(var i=1;i<=nobtn;i++)
@@ -179,7 +179,7 @@ function paginate(no,d,pno)
 
 // BUTTON CLICK HERE ///  
 
-	var classname = document.getElementsByClassName("tbtn");
+	let classname = document.getElementsByClassName("tbtn");
 
 	for (var i = 0; i < classname.length; i++) 
 	{
